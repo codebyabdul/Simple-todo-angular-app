@@ -1,0 +1,47 @@
+<section>
+
+  <div class="todo-app-main">
+
+    <div class="todo-app-inner-main">
+
+      <div class="todo-head-div">
+
+        <h2>
+          Todo App
+        </h2>
+
+        <div class="todo-input-div">
+
+          <form>
+
+            <mat-form-field style="width: 75%;">
+              <input matInput placeholder="Add your new todo" [(ngModel)]="new_todo" name="todoInput">
+            </mat-form-field>
+
+            <button mat-button (click)="submitTodo()">
+              Add
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="todo-body-div">
+
+        <div class="todo-item" *ngFor="let item of todos;let i=index" (click)="taskCompleted(i)" matRipple>
+
+          <h4>
+            {{item}}
+          </h4>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
